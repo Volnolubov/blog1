@@ -22,46 +22,46 @@ $large: 1024px;
 
 .view {
   
-   @include respond-to(handhelds) { max-width: 280px; padding: 0.5em; }
-   @include respond-to(medium-screens) { max-width: 240px; }
+   @include respond-to(handhelds) { max-width: 320px; padding: 0.5em; }
+   @include respond-to(medium-screens) { max-width: 320px; }
    @include respond-to(wide-screens) { min-width: 180px; max-width: 500px; } 
 }
 
 .view p
 {
    font-size: 22px;
-   @include respond-to(handhelds) { max-width: 280px; padding: 0.5em; font-size: 12px; }
-   @include respond-to(medium-screens) { max-width: 240px; font-size: 14px; }
+   @include respond-to(handhelds) { max-width: 320px; padding: 0.5em; font-size: 12px; }
+   @include respond-to(medium-screens) { max-width: 320px; font-size: 14px; }
    @include respond-to(wide-screens) { min-width: 180px; max-width: 500px; } 
 }
 .view h2 
 {
   
    @include respond-to(handhelds) { max-width: 280px; padding: 0.5em; }
-   @include respond-to(medium-screens) { max-width: 240px; }
+   @include respond-to(medium-screens) { max-width: 320px; }
    @include respond-to(wide-screens) { min-width: 180px; max-width: 500px; } 
 }
 .mask
 {
   
-   @include respond-to(handhelds) { max-width: 280px; padding: 0.5em; }
-   @include respond-to(medium-screens) { max-width: 240px; }
+   @include respond-to(handhelds) { max-width: 320px; padding: 0.5em; }
+   @include respond-to(medium-screens) { max-width: 320px; }
    @include respond-to(wide-screens) { min-width: 180px; max-width: 500px; } 
 }
 
 .img_home_left {
   float: left;
   max-width: 500px;
-   @include respond-to(handhelds) { max-width: 280px; padding: 0.5em; float: left; }
+   @include respond-to(handhelds) { max-width: 320px; padding: 0.5em; float: left; }
 
-   @include respond-to(medium-screens) { max-width: 240px;  float: left; }
+   @include respond-to(medium-screens) { max-width: 320px;  float: left; }
    @include respond-to(wide-screens) { min-width: 180px; max-width: 500px; } 
 
    }
 p_home_left {
   
   max-width: 500px;
-   @include respond-to(handhelds) { max-width: 300px; }
+   @include respond-to(handhelds) { max-width: 320px; }
    @include respond-to(medium-screens) { min-width: 180px; max-width: 90%; }
    @include respond-to(wide-screens) { min-width: 180px; max-width: 100%; } 
 }
