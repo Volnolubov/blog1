@@ -22,6 +22,3 @@
 //= require_tree .
 //= require bootstrap-sprockets
 
-$ (function () {
-AOS.init ();
-});
