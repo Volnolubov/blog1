@@ -21,5 +21,7 @@
 //= require bootstrap-wysihtml5/handlebars.runtime.min.js
 //= require_tree .
 //= require bootstrap-sprockets
-//= require wow
 
+$ (function () {
+AOS.init ();
+});

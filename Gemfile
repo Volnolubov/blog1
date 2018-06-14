@@ -20,7 +20,6 @@ gem "animate-rails"
 gem 'sass-mediaqueries-rails'
 gem 'devise'
 gem 'contact_us', '~> 1.0.1'
-gem 'wow-rails'
 gem 'bower-rails'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.0'
