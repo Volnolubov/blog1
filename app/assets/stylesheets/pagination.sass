@@ -1,0 +1,46 @@
+.digg_pagination
+  background: #fcfcfc
+  cursor: default
+  float: right
+  min-width: 300px
+  min-height: 50px
+  a, span, em
+    padding: 0.3em 0.7em
+    display: block
+    float: left
+    margin-right: 1px
+    border-radius: 4px
+    background: #fff
+    box-shadow: 2px 2px 2px 1px rgba(171, 166, 166, 0.3)
+      
+   
+  .disabled
+    color: #d5d2d2
+    box-shadow: 2px 2px 2px 1px rgba(243, 238, 238, 0.3)
+  .current
+    font-style: normal
+    font-weight: bold
+    background: #777
+    color: white
+    padding: 0.3em 0.7em 
+  a
+    text-decoration: none
+    color: #777
+    outline: none
+    &:hover, &:focus
+        color: #000
+        text-decoration: none
+        ox-shadow: 2px 2px 2px 1px rgba(78, 76, 76, 0.3)
+        background-color: #fcfcfc
+  
+  /* self-clearing method:
+  &:after
+    content: "."
+    display: block
+    height: 0
+    clear: both
+    visibility: hidden
+  * html &
+    height: 1%
+  *:first-child+html &
+    overflow: hidden

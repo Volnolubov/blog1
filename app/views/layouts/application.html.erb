@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Блог на Ruby on Rails</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
+    <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+
+    <style type="text/css">
+.navbar { border: 0; }
+.navbar-nav {
+    margin: 0px;
+}
+.navbar-collapse {
+    margin-left: 0px;}
+    
+    .navbar-collapse.in {
+    overflow-y: hidden;}
+
+    .dropdown-menu {
+  background-color: #fcfcfc;
+}
+        </style>
+        <meta name="viewport" content="width=device-width; initial-scale=1.0">
+      <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet">  
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/codemirror.min.css" rel="stylesheet"> 
+      <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.min.css" rel="stylesheet">    
+  </head>
+   <body class="body">
+    <div class="loader"></div>
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container" id="m1">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <div class="nav-brend"><a class="link_to" href="http://web-joys.ru">
+            <div class="home_link" aria-hidden="true">&nbsp;<%= t('.btn_hom') %></div></a></div>
+        </div>
+        <div class="navbar-collapse collapse">
+                                                
+          <ul class="nav navbar-nav navbar-right">
+             <ul class="nav navbar-nav"">
+            
+            <li class="btn <%= 'active' if current_page?(root_path) || current_page?(posts_path) %>">
+              <a class="btn btn-outline-primary" href="<%= posts_path %>"><i class="fa fa-book fa-fw" aria-hidden="true"></i>&nbsp;<%= t('.btn_articles') %></a></li>
+            <li class="btn <%= 'active' if current_page?(root_path) || current_page?(contact_us_path) %>">
+              <a class="btn btn-outline-primary" href="<%= contact_us_path %>"><i class="fa fa-envelope" aria-hidden="true"></i>&nbsp;<%= t('.btn_contacts') %></a></li>
+            <li class="dropdown nav-link3"">
+              <a href="#" class="dropdown-toggle nav-link3" data-toggle="dropdown"><i class="fa fa-bars" aria-hidden="true"></i><b class="caret"></b>&nbsp;<%= t('.btn_cat') %></a>
+              <ul class="dropdown-menu">
+                <div class="submenu">
+              <ul class="subnav nav-pills nav-stacked">
+    <% Category.roots.each do |category| %>
+      <li class="nav-item">
+        <%= link_to category.name, category, class: "nav-link #{'active' if current_page?(category_path(category))}" %>
+        <%= render 'shared/submenu_categories', categories: category.root.descendants.arrange %>
+      </li>
+    <% end %>
+  </ul></div>
+              </ul>
+            </li>
+          </ul>
+               
+            <li class="btn <%= 'active' if current_page?(root_path) || current_page?(new_admin_post_path) %>">
+             <%= link_to t('.new_articles'), new_admin_post_path, class: 'btn btn-outline-primary' %></li>
+           
+           
+              <% if user_signed_in? %>
+              <li class="btn">
+                <%= link_to "Выход", destroy_user_session_path, method: :delete, class: 'btn btn-outline-primary' %>
+              </li>
+            <% else %>
+             <li class="btn <%= 'active' if current_page?(root_path) || current_page?(new_user_session_path) %>">
+             <%= link_to t('.btn_enter'), new_user_session_path, class: 'btn btn-outline-primary' %></li>
+            
+               <li class="btn <%= 'active' if current_page?(root_path) || current_page?(new_user_registration_path) %>">
+              <a class="btn btn-outline-primary" href="<%= new_user_registration_path %>"><i class="fa fa-user" aria-hidden="true"></i>&nbsp;<%= t('.btn_reg') %></a></li>
+            
+            <% end %>
+            <li class="btn <%= " active" if I18n.locale == :en %>">
+              <%= link_to "En", { locale: :en }, class: "btn btn-outline-primary" %>
+            </li>
+             <li class="btn <%= " active" if I18n.locale == :ru %>">
+              <%= link_to "Рус", { locale: :ru }, class: "btn btn-outline-primary" %>
+            </li> 
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+  
+  <div class="container main">
+    <div class="row">
+     <div class="col-md-12">
+      <% flash.each do |name, message| %>
+            <div class="alert <%= bootstrap_class_for(name) %>">
+              <button class="close" data-dismiss="alert">&times;</button>
+              <%= message %>
+            </div>
+          <% end %>
+     </div>
+  <div class="container">
+
+   <div class="row">
+        <div class="col-md-9">
+          <%= yield %>
+        </div>
+        <div class="col-md-3">
+           <div class="fixed_tags">
+            <div class="animated zoomIn"><div class="tags"><div class="tag_cloud">
+            <h2 class="h2_link"><%= t('.tags_title') %></h2>
+             <% tag_cloud(Tag.counts, %w{tag1 tag2 tag3 tag4 tag5}) do |tag, css_class| %>
+              <%= link_to tag.name, tag_path(tag.name), class: css_class %>
+               <% end %>
+            </div></div></div>
+
+         </div>
+         </div>
+         
+          </div>
+        </div>
+      </div>
+   </div>
+<script type="text/javascript">
+  $(function(){
+ $(window).scroll(function() {
+ if($(this).scrollTop() >= 70) {
+ $('nav.navbar').addClass('stickytop');
+ }
+ else{
+ $('nav.navbar').removeClass('stickytop');
+ }
+ });
+});
+</script>
+<script type="text/javascript">
+  $(document).ready(function() {
+    $(".dropdown-toggle").dropdown();
+});</script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

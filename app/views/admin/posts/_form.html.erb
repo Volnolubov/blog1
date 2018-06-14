@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+ 
+    <!-- Include external CSS. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+    <link rel="stylesheet" href="/app/assets/stylesheets/codemirror.min.css">
+ 
+    <!-- Include Editor style. -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.pkgd.min.css" rel="stylesheet" type="text/css" />
+    <link href="/app/assets/stylesheets/froala_style.min.css" rel="stylesheet" type="text/css" />
+  </head>
+ 
+  <body>
+        <!-- Include external JS libs. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/codemirror.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.25.0/mode/xml/xml.min.js"></script>
+ 
+    <!-- Include Editor JS files. -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/js/froala_editor.pkgd.min.js"></script>
+ 
+    <!-- Initialize the editor. -->
+    <script> $(function() { $('textarea').froalaEditor() }); </script>
+    <script type="text/javascript">
+      $( document ).ready(function() {
+
+  // hide spinner
+  $(".spinner").hide();
+
+
+  // show spinner on AJAX start
+  $(document).ajaxStart(function(){
+    $(".spinner").show();
+  });
+
+  // hide spinner on AJAX stop
+  $(document).ajaxStop(function(){
+    $(".spinner").hide();
+  });
+
+});
+
+$(document).ajaxStop(function(){
+  $(".spinner").delay(3000).hide(0);
+});
+
+$(document).on("page:fetch", function(){
+  $(".spinner").show();
+});
+
+$(document).on("page:receive", function(){
+  $(".spinner").hide();
+});
+    </script>
+  </body>
+</html>
+<% if @post.errors.any? %>
+
+ <div class="alert alert-danger">
+   <h5><%= t('common.errors') %></h5>
+    <ul>
+     <% @post.errors.full_messages.each do |message| %>
+       <li><%= message %></li>
+      <% end %>
+    </ul>
+ </div>
+<% end %>
+
+<%= form_for [:admin, @post], html: { multipart: true } do |f| %>
+ <div class="fr-view">
+  <%= f.label :title %>
+  <%= f.text_area :title, class: 'fr-view' %>
+ </div>
+
+ <div class="fr-view">
+  <%= f.label :summary %>
+  <%= f.text_area :summary, class: 'fr-view' %>
+ </div>
+
+ <div class="fr-view">
+  <%= f.label :body %>
+   <%= f.text_area :body, class: 'fr-view' %>
+
+ </div>
+
+ <div class="form-group">
+ <%= f.label :category_id %>
+ <%= f.collection_select :category_id, Category.order(:name), :id, :name, { include_blank: true }, class: 'form-control' %> 
+ </div>
+
+<div class="form-group_tags">
+  <%= f.label :all_tags %>
+   <%= f.text_field :all_tags, class: 'form-control' %>
+
+ </div>
+  <div class="bin_img">
+   <%= f.file_field :image %>
+ </div>
+
+ <div class="form-group">
+  <%= f.button t('.submit', action: @post.new_record? ? t('.create') : t('.edit')), class: "btn btn-success", data: {disable_with: "&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; <i class='fa fa-spinner fa-spin'></i> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; "} %>
+  <%= link_to t('common.back'), :back, class: 'btn btn-outline-secondary' %>
+
+
+
+</div>
+<% end %>

@@ -1,0 +1,13 @@
+<div class="animated bounceInLeft"><h1 class="h1_title"><%= t('.title') %></h1></div>
+
+
+ <section id='blog'>
+	<%= render @posts %>
+</section>
+
+<div class="digg_pagination">
+    <div class="page_info">
+     
+    </div>
+    <%= will_paginate @posts, :container => false %>
+  </div>

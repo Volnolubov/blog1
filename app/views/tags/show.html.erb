@@ -1,0 +1,7 @@
+<div class="animated bounceInLeft"><h1 class="h1_title"><%= @tag.name %></h1></div>
+
+<% if @tag.posts.empty?  %>
+  <h2 class="h2_link">Статей нет</h2>
+<% else %>
+  <%= render @tag.posts %>
+<% end %>

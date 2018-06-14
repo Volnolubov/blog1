@@ -1,0 +1,51 @@
+
+nav.navbar.stickytop {
+       position: fixed;
+       top: 0;
+       width: 100%;
+       z-index: 99;
+       box-shadow: 2px 2px 2px 1px rgba(171, 166, 166, 0.3);
+       height: 66px;
+}
+
+nav.navbar_home.stickytop {
+       position: fixed;
+       top: 0;
+       width: 100%;
+       z-index: 99;
+       box-shadow: 2px 2px 2px 1px rgba(171, 166, 166, 0.3);
+       height: 66px;
+}
+
+.navbar-default {
+    
+    height: 65px;
+}
+
+.navbar-collapse.in {
+    overflow-y: hidden;
+    position: relative;
+}
+
+.nav-brend {
+  
+  z-index: 98;
+}
+
+.navbar-collapse {
+    margin-left: 0px;
+    overflow: hidden;
+    position: relative;
+    margin-left: o;
+    z-index: 97;
+}
+
+.navbar-nav {
+    margin: 0px;
+}
+
+.navbar {
+    
+    border: 0;
+        
+}

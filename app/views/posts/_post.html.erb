@@ -1,0 +1,32 @@
+<div class="animated fadeIn">
+ <article class="post">
+ <section class="post-head">
+  <h2 class="h2_link"><%= link_to post.title.html_safe, post_path(post), class: 'link_h2' %></h2>
+<small><div class="conteiner_btn"><div class="cont_btn">
+  <div class="bin_time"><time><%= post.created_at.to_date.strftime("%d %B, %Y") %></time></div>
+
+<div class="bin_edit"><i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;<% if post.category.present? %>
+<%= link_to post.category.name, post.category, class: 'link_to' %><% end %>
+</div>
+
+   
+       
+<div class="bin_edit"><i class="fa fa-edit" aria-hidden="true"></i>&nbsp;<%=link_to t('.edits'), edit_admin_post_path(post), class: 'link_to' %></div>
+
+<div class="bin_del"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;<%=link_to t('.delete'), admin_post_path(post),  method: :delete,  data: { confirm: t('.qwestchion') }, class: 'link_to' %></div></div></div>
+
+</small>
+</section>
+<div class="row">&nbsp;</div>
+<div class="post-summary clearfix"><div class="fr-view"><div class="body_show">
+ 	<%= image_tag post.image.url(:thumb), class: 'img-thumbnail thumb' if post.image? %>
+ <%= post.summary.html_safe %></div></div></div>
+  <section class="footer-summary">
+ 	<%= raw post.tags.map(&:name).map{ |t| link_to t, tag_path(t), class: 'badge_tags' }.join(' ') %>
+
+ </section>
+</article>
+</div>
+
+
+

@@ -1,0 +1,140 @@
+ru:
+  posts:
+    create_yes: 'Статья успешно создана'
+    create_no: 'Статья не создана'
+    articl_yes: 'Статья обновлена'
+    articl_no: 'Статья не обновлена'
+    articl_del: 'Статья успешно удалена'
+    index: 
+      title: 'Статьи'
+    show:
+      edits: 'Редактировать'
+      delete: 'Удалить' 
+      qwestchion: 'Вы уверены?'  
+    post:
+      post_image:
+       post[image]: 'Выбирите файл'
+      edits: 'Редактировать'
+      delete: 'Удалить' 
+      qwestchion: 'Вы уверены?'
+  devise:
+    passwords:
+      new:
+        forgot_your_password: 'Забыли пароль?'
+    sessions:
+      new:
+        log_in: 'Авторизоваться'    
+    shared:
+      links:
+         forgot_your_password: 'Забыли пароль?'
+         log_in: 'Авторизоваться'
+         receive_unlock: 'Не получили инструкции по разблокировке?'
+         receive_confirmation: 'Не получили подтверждения?'
+         sign_up: 'Зарегистрироваться'
+    confirmations:
+      new: 
+        resend_confirmation: 'Отправить инструкции по подтверждению'  
+        resend: 'Отправить'    
+    registrations:
+      new: 
+        sign_up: 'Зарегистрироваться'
+      edit:
+        edit: 'Редактировать' 
+        cancel: 'Удалить мой аккаунт'
+        unhappy: 'Недовольны?'
+        update: 'Обновить'   
+  btn_articles: 'Статьи'
+  common:
+   errors: 'При заполнении формы возникла ошибка'
+   back: 'Назад'
+  will_paginate:
+    previous_label: '&larr; Назад'
+    next_label: 'Вперед &rarr;'  
+  layouts:
+   application:
+     btn_enter: 'Вход'
+     btn_reg: 'Регистрация'
+     btn_cat: 'Категории'
+     btn_works: 'В разработке'
+     btn_new_cat: 'Новая категория'
+     btn_hom: 'Мой сайт'
+     btn_articles: 'Статьи'
+     btn_contacts: 'Контакты'
+     new_articles: 'Новая статья'  
+     qwestchion: 'Вы уверены?'
+     tags_title: 'Теги'
+
+   admin:
+     btn_cat: 'Категории'
+     btn_works: 'В разработке'
+     btn_new_cat: 'Новая категория'
+     btn_hom: 'Мой сайт'
+     btn_articles: 'Статьи'
+     btn_contacts: 'Контакты'
+     new_articles: 'Новая статья'  
+     qwestchion: 'Вы уверены?'
+     tags_title: 'Теги'   
+   index:
+     btn_works: 'В разработке'
+     btn_new_cat: 'Новая категория'
+     btn_hom: 'Мой сайт'
+     btn_articles: 'Блог'
+     btn_contacts: 'Контакты'
+     logo_text: 'портфолио веб разработчика'  
+    
+  admin: 
+   posts:
+    create_yes: 'Статья успешно создана'
+    create_no: 'Статья не создана'
+    articl_yes: 'Статья обновлена'
+    articl_no: 'Статья не обновлена'
+    articl_del: 'Статья успешно удалена'
+    show:
+      edits: 'Редактировать'
+      delete: 'Удалить' 
+      qwestchion: 'Вы уверены?'  
+    post:
+      post_image:
+       post[image]: 'Выбирите файл'
+      edits: 'Редактировать'
+      delete: 'Удалить' 
+      qwestchion: 'Вы уверены?'
+    index: 
+     title: 'Статьи' 
+    new:
+     title: 'Новая статья'
+    edit: 
+     title: 'Редактирование статьи'  
+    form:
+     create: 'Создать'
+     edit: 'Изменить' 
+     submit:
+      '%{action} статью'    
+    categories:
+     create: 
+      cat_create_yes: 'Категория успешно создана'
+      cat_create_not: 'Категория не создана'
+     destroy:
+      cat_del: 'Категория успешно удалена'
+     update: 
+      cat_update_yes: 'Категория успешно обновлена'
+      cat_update_not: 'Категория не обновлена'            
+     index: 
+      name: 'Название' 
+      cat_parent: 'Категория родитель' 
+      new_category: 'Новая категория'
+      title: 'Категории' 
+      edit: 'Изменить'
+      delete: 'Удалить'
+      qwestchion: 'Вы уверены?'
+     new:
+      title: 'Новая категория'
+     edit: 
+      title: 'Редактирование категории'  
+     form:
+      create: 'Создать'
+      edit: 'Изменить' 
+      submit:
+       '%{action} категорию'  
+        
+       

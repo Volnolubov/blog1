@@ -1,0 +1,4 @@
+asset 'jquery', '1.11.1'
+asset 'jquery-ujs'
+asset 'jquery-ui'
+asset 'evil-blocks'

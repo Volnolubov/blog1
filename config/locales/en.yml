@@ -1,0 +1,114 @@
+# Files in the config/locales directory are used for internationalization
+# and are automatically loaded by Rails. If you want to use locales other
+# than English, add the necessary files in this directory.
+#
+# To use the locales, use `I18n.t`:
+#
+#     I18n.t 'hello'
+#
+# In views, this is aliased to just `t`:
+#
+#     <%= t('hello') %>
+#
+# To use a different locale, set it with `I18n.locale`:
+#
+#     I18n.locale = :es
+#
+# This would use the information in config/locales/es.yml.
+#
+# The following keys must be escaped otherwise they will not be retrieved by
+# the default I18n backend:
+#
+# true, false, on, off, yes, no
+#
+# Instead, surround them with single quotes.
+#
+# en:
+#   'true': 'foo'
+#
+# To learn more, please read the Rails Internationalization guide
+# available at http://guides.rubyonrails.org/i18n.html.
+
+en:
+  common:
+   errors: 'An error occurred while completing the form'
+   back: 'Go back'
+  layouts:
+   application:
+     btn_cat: 'Category'
+     btn_hom: 'My site'
+     btn_works: 'In developing'
+     btn_new_cat: 'New category'
+     btn_articles: 'Articles'
+     btn_contacts: 'Contacts'
+     new_articles: 'New article'
+     tags_title: 'Tags'
+  layouts:   
+   admin:
+     btn_cat: 'Category'
+     btn_hom: 'My site'
+     btn_works: 'In developing'
+     btn_new_cat: 'New category'
+     btn_articles: 'Articles'
+     btn_contacts: 'Contacts'
+     new_articles: 'New article'
+     tags_title: 'Tags'   
+   index:
+     btn_hom: 'My site'
+     btn_works: 'In developing'
+     btn_new_cat: 'New category'
+     btn_articles: 'Blog'
+     btn_contacts: 'Contacts'
+     logo_text: 'portfolio of web developer'    
+  posts:
+    create_yes: 'Article successfully created'
+    create_no: 'Article not created'
+    articl_yes: 'Articl upgreid successfule'
+    articl_noy: 'Article not updated'
+    articl_del: 'Article successfully deleted'
+    show:
+      edits: 'Edit'
+      delete: 'Delete'  
+      qwestchion: 'Are you sure?'   
+    post:
+      edits: 'Edit'
+      delete: 'Delete'
+      qwestchion: 'Are you sure?'
+    index: 
+     title: 'Articles'
+    new:
+     title: 'New article'
+    edit: 
+     title: 'Editing an article' 
+    form:
+     create: 'Create' 
+     edit: 'Edit' 
+     submit: 
+      '%{action} article' 
+  admin:    
+   categories:
+    create: 
+     cat_create_yes: 'Category successfully created'
+     cat_create_not: 'Category not created'
+    destroy:
+     cat_del: 'Category successfully deleted'
+    update: 
+     cat_update_yes: 'Category successfully updated'
+     cat_update_not: 'Category not updated'       
+    index: 
+     name: 'Name' 
+     cat_parent: 'Category parent' 
+     new_category: 'New category'
+     title: 'Categories' 
+     edit: 'Edit'
+     delete: 'Delete'
+     qwestchion: 'Are you sure?' 
+    new:
+     title: 'New category'
+    edit: 
+     title: 'Category editing'  
+    form:
+     create: 'Create'
+     edit: 'Edit' 
+     submit:
+      '%{action} category'        

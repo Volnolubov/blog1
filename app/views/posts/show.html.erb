@@ -1,0 +1,27 @@
+<%= render 'shared/breadcrumb', category: @post.category %>
+<div class="animated fadeInDown"><div class="container_btn"><article class="post">
+ <section class="post-head">
+  <h1 class="h1_title"><%= @post.title.html_safe %></h1>
+<small>
+ <div class="bin_time"><time><%= @post.created_at.to_date.strftime("%d %B, %Y") %></time></div>
+ <% if @post.category.present? %>
+        
+        <div class="bin_edit"><i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;
+<%= link_to @post.category.name, @post.category %>
+      <% end %></div>
+      <% if user_signed_in? && current_user.admin? %>
+      
+<div class="bin_edit"><i class="fa fa-edit" aria-hidden="true"></i>&nbsp;<%=link_to t('.edits'), edit_admin_post_path(@post), class: 'link_to' %></div>
+<div class="bin_del"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;<%=link_to t('.delete'), admin_post_path(@post), method: :delete,  data: { confirm: t('.qwestchion') }, class: 'link_to' %></div><% end %>
+</small>
+</section>
+
+ <div class="body_show">
+ 	<section class="post-body">
+ <%= image_tag @post.image.url(:large), class: 'img-show' if @post.image? %>
+ <div class="fr-view"><%= @post.summary.html_safe %></div>
+ <div class="fr-view"><%= @post.body.html_safe %></div>
+ </section></div>
+</article></div></div>
+
+<%= render 'disqus' %>
