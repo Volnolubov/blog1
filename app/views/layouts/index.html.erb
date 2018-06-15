@@ -6,12 +6,24 @@
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
     <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
+    <%= favicon_link_tag 'favicon.ico', media: "all", "data-turbolinks-track" => true %>
     <style type="text/css">
 .navbar { border: 0; }
+ li {
+    list-style-type: none; /* Убираем маркеры */
+   }
+   ul {
+    margin-left: 0; /* Отступ слева в браузере IE и Opera */
+    padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
+   }
+   a {
+  color: #777777 }
+a:hover {
+  color: #333  }
      </style>
       
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     
+     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
      <link href="https://fonts.googleapis.com/css?family=Caveat" rel="stylesheet"> 
               
      </head>
@@ -82,6 +94,7 @@
       </div>
     </nav>
   <!--///////////////////-->
+ 
 <div class="container">
   <div class="row">
      <div class="content">
@@ -191,19 +204,74 @@
                 </div> 
                 </div></div>
          <div class="clearfix"></div>
-        <div class="content">
-      <div class="col-md-6">
-        <img src="" alt="">
-      </div>
-      <div class="col-md-6">
-        <img src="" alt="">
-      </div>
-    </div>
-    <div class="clearfix"></div>
-
-   
+       
   </div>
 </div>
+</div>
+ <div class="clearfix_footer"></div>
+<footer>
+    <div class="footer" id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="f_cpl">
+               <div class="col-md-4 col-sm-12 col-xs-12 my-col"><h3>Создание сайтов</h3>
+                    <ul class="center">
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Визика</a></li>
+                        <li><a href="#">Интернет магазин</a></li>
+                        <li><a href="#">Государственные услуги</a></li>
+                    </ul></div>
+               <div class="col-md-4 col-sm-12 col-xs-12 my-col">
+                    <h3>Создание сайтов</h3>
+                    <ul class="center">
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Визика</a></li>
+                        <li><a href="#">Интернет магазин</a></li>
+                        <li><a href="#">Государственные услуги</a></li>
+                    </ul>
+                </div>
+             <div class="col-md-4 col-sm-12 col-xs-12 my-col"><h3>Создание сайтов</h3>
+                    <ul class="center">
+                        <li><a href="#">Блог</a></li>
+                        <li><a href="#">Визика</a></li>
+                        <li><a href="#">Интернет магазин</a></li>
+                        <li><a href="#">Государственные услуги</a></li>
+                    </ul></div>
+                </div>
+                </div>
+                 <div class="row_footer">
+                                 
+                
+                <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+                   
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                        <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                        <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        
+                    </ul>
+                </div>
+               
+                </div>
+               
+            </div>
+            <!--/.row--> 
+        </div>
+        <!--/.container--> 
+    </div>
+    <!--/.footer-->
+    
+    <div class="footer-bottom">
+        <div class="container">
+            <p class="pull-left"> Copyright © Web-Joys.ru 2018</p>
+            <div class="pull-right">
+                
+            </div>
+        </div>
+    </div>
+    <!--/.footer-bottom--> 
+</footer>
 
 <script type="text/javascript">
 
@@ -520,6 +588,10 @@ $('body,html').animate({scrollTop: top}, 1000);
   $(document).ready(function() {
     $(".dropdown-toggle").dropdown();
 });</script>
+
+<script type="text/javascript">
+  
+</script>
 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
