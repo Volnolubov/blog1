@@ -12,13 +12,17 @@ $large: 1024px;
     @media only screen and (min-width: $large) { @content; }
   }
 }
-
- 
+.logo_footer {
+    
+@include respond-to(handhelds) { left: 50%; margin-right: -50%; transform: translate(-50%, -50%); margin: 0; position: relative; width: 236px; }
+@include respond-to(medium-screens) { left: 50%; margin-right: -50%; transform: translate(-50%, -50%); margin: 0; position: relative; width: 236px; } 
+    }
+    
 .fixed_tags    
 {
   
-   @include respond-to(handhelds) { position: relative; }
-   @include respond-to(medium-screens) { position: relative; }                
+   @include respond-to(handhelds) { position: relative; padding: 1em; }
+   @include respond-to(medium-screens) { position: relative; padding: 1em; }                
 }
 
 .view {

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Блог на Ruby on Rails</title>
+    <title><%= t('.title_text') %></title>
     <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -30,9 +30,9 @@ li {
     padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
    }
    a {
-  color: #777777 }
+  color: #777777; }
 a:hover {
-  color: #333  }
+  color: #333;  }
         </style>
         <meta name="viewport" content="width=device-width; initial-scale=1.0">
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
@@ -40,7 +40,7 @@ a:hover {
       <link href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.32.0/codemirror.min.css" rel="stylesheet"> 
       <link href="https://cdnjs.cloudflare.com/ajax/libs/froala-editor/2.8.1/css/froala_editor.min.css" rel="stylesheet">    
   </head>
-   <body class="body">
+   <body class="body-style">
     <div class="loader"></div>
     <nav class="navbar navbar-default" role="navigation">
       <div class="container" id="m1">
@@ -78,10 +78,10 @@ a:hover {
               </ul>
             </li>
           </ul>
-               
+               <% if user_signed_in? && current_user.admin? %>
             <li class="btn <%= 'active' if current_page?(root_path) || current_page?(new_admin_post_path) %>">
              <%= link_to t('.new_articles'), new_admin_post_path, class: 'btn btn-outline-primary' %></li>
-           
+           <% end %>
            
               <% if user_signed_in? %>
               <li class="btn">
@@ -142,48 +142,45 @@ a:hover {
         <div class="container">
             <div class="row">
                 <div class="f_cpl">
-               <div class="col-md-4 col-sm-12 col-xs-12 my-col"><h3>Создание сайтов</h3>
+               <div class="col-md-4 col-sm-12 col-xs-12 my-col"><h3><%= t('.map_site') %></h3>
                     <ul class="center">
-                        <li><a href="#">Блог</a></li>
-                        <li><a href="#">Визика</a></li>
-                        <li><a href="#">Интернет магазин</a></li>
-                        <li><a href="#">Государственные услуги</a></li>
+                        <li class="btn <%= 'active' if current_page?(root_path) || current_page?(posts_path) %>"> <a class="nav-link3" href="<%= posts_path %>"><%= t('.btn_blog') %></a></li>
+                        <li class="btn <%= 'active' if current_page?(root_path) || current_page?(contact_us_path) %>"><a class="btn btn-outline-primary" href="<%= contact_us_path %>"><%= t('.btn_contacts') %></a></li>
+                        
                     </ul></div>
                <div class="col-md-4 col-sm-12 col-xs-12 my-col">
-                    <h3>Создание сайтов</h3>
+                   <h3><%= t('.create_site') %></h3>
                     <ul class="center">
-                        <li><a href="#">Блог</a></li>
-                        <li><a href="#">Визика</a></li>
-                        <li><a href="#">Интернет магазин</a></li>
-                        <li><a href="#">Государственные услуги</a></li>
+                        <li><a href="#"><%= t('.btn_blog_site') %></a></li>
+                        <li><a href="#"><%= t('.btn_card') %></a></li>
                     </ul>
                 </div>
-             <div class="col-md-4 col-sm-12 col-xs-12 my-col"><h3>Создание сайтов</h3>
+             <div class="col-md-4 col-sm-12 col-xs-12 my-col"><h3><%= t('.In_project') %></h3>
                     <ul class="center">
-                        <li><a href="#">Блог</a></li>
-                        <li><a href="#">Визика</a></li>
-                        <li><a href="#">Интернет магазин</a></li>
-                        <li><a href="#">Государственные услуги</a></li>
+                        <li><a href="#"><%= t('.btn_blog_site') %></a></li>
+                        <li><a href="#"><%= t('.btn_card') %></a></li>
+                        <li><a href="#"><%= t('.online_shop') %></a></li>
+                        <li><a href="#"><%= t('.public_services') %></a></li>
                     </ul></div>
-                </div>
-                </div>
-                 <div class="row_footer">
-                                 
-                
-                <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
-                   
-                    <ul class="social">
+                    <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+                      
+                   <li class="btn"><a class="logo_ubuntu" href="https://www.ubuntu.com/"></a></li>
+                   <li class="btn"><a class="logo_rails" href="https://rubyonrails.org/"></a></li>
+                   <li class="btn"><a class="logo_postgresql" href="https://www.postgresql.org/"></a></li>
+                   <li class="btn"><a class="logo_nginx" href="https://nginx.ru/ru/"></a></li></div>
+                     
+                 </div>
+               </div>
+                 
+                   <div class="row_footer">
+                        <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+                        <ul class="social"></h3>
                         <li><a href="#"><i class="fa fa-github"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        
-                    </ul>
-                </div>
+                        </ul></div></div>
                
-                </div>
-               
-            </div>
             <!--/.row--> 
         </div>
         <!--/.container--> 
@@ -192,11 +189,10 @@ a:hover {
     
     <div class="footer-bottom">
         <div class="container">
-            <p class="pull-left"> Copyright © Web-Joys.ru 2018</p>
-            <div class="pull-right">
-                
-            </div>
+            <p class="pull-left"> Copyright © Web-Joys.ru</p>
+             <div class="pull-left2_f"><p class="pull-left2"> 2018</p></div>
         </div>
+                            
     </div>
     <!--/.footer-bottom--> 
 </footer>

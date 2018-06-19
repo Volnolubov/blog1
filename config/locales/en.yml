@@ -36,17 +36,66 @@ en:
   layouts:
    application:
      btn_cat: 'Category'
-     btn_hom: 'My site'
+     btn_hom: 'Web Joys'
      btn_works: 'In developing'
      btn_new_cat: 'New category'
      btn_articles: 'Articles'
      btn_contacts: 'Contacts'
      new_articles: 'New article'
      tags_title: 'Tags'
-  layouts:   
+  devise:
+    passwords:
+      new:
+        forgot_your_password: 'Forgot your password?'
+    sessions:
+      new:
+        log_in: 'Log in'    
+    shared:
+      links:
+         forgot_your_password: 'Forgot your password?'
+         log_in: 'Log in'
+         receive_unlock: 'Did not receive instructions for unlocking?'
+         receive_confirmation: 'Did not receive a confirmation?'
+         sign_up: 'Sign Up'
+    confirmations:
+      new: 
+        resend_confirmation: 'Send verification instructions'  
+        resend: 'Send'    
+    registrations:
+      new: 
+        sign_up: 'Sign Up'
+      edit:
+        edit: 'Edit' 
+        cancel: 'Delete my account'
+        unhappy: 'Are you unhappy?'
+        update: 'Update'  
+
+  layouts:  
+   application:
+     btn_enter: 'Login'
+     btn_reg: 'Sign Up'
+     btn_cat: 'Category'
+     btn_works: 'In developing'
+     btn_new_cat: 'New category'
+     btn_hom: 'Web Joys'
+     btn_articles: 'Articles'
+     btn_contacts: 'Contacts'
+     new_articles: 'New article'  
+     qwestchion: 'Are you sure?'
+     tags_title: 'Tags'
+     map_site: 'Site Map' 
+     btn_blog: 'Website blog'
+     create_site: 'Web Application Development'
+     btn_card: 'Website card'
+     btn_blog_site: 'Website blog'
+     title_text: 'Web Application Developmen'
+     In_project: 'In project'
+     online_shop: 'Online shop'
+     public_services: 'Public services'
+
    admin:
      btn_cat: 'Category'
-     btn_hom: 'My site'
+     btn_hom: 'Web Joys'
      btn_works: 'In developing'
      btn_new_cat: 'New category'
      btn_articles: 'Articles'
@@ -54,12 +103,34 @@ en:
      new_articles: 'New article'
      tags_title: 'Tags'   
    index:
-     btn_hom: 'My site'
+     btn_hom: 'Web Joys'
      btn_works: 'In developing'
      btn_new_cat: 'New category'
      btn_articles: 'Blog'
      btn_contacts: 'Contacts'
-     logo_text: 'portfolio of web developer'    
+     logo_text: 'portfolio of web developer'
+     btn_blog: 'Blog' 
+     btn_blog_site: 'Website blog'
+     map_site: 'Site Map' 
+     create_site: 'Web Application Development' 
+     btn_card: 'Website card' 
+     text_home_title: 'A little bird'
+     text_home1: 'In alien lands devoutly clinging'
+     text_home2: 'To age-old rites of Russian earth,'
+     text_home3: 'I let a captive bird go winging'
+     text_home4: 'To greet the radiant springs rebirth.'
+     text_home5: 'My heart grew lighter then: why mutter'
+     text_home6: 'Against Gods providence, and rage,'
+     text_home7: 'When I was free to set aflutter'
+     text_home8: 'But one poor captive from his cage!' 
+     text_as:    'Alexander Pushkin'
+     title_text: 'Web Application Developmen'
+     text_landing1: '"TRAVEL" - website about travels'
+     text_blog: 'Blog on Ruby on Rails'
+     read_more: 'Read more'
+     text_blog1: 'How I created this site'
+     text_landing0: 'Effects for the site'
+     text_landing_title: 'Parallax effect + javascript animation'
   posts:
     create_yes: 'Article successfully created'
     create_no: 'Article not created'

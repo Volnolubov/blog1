@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Сайт на Ruby on Rails</title>
+    <title><%= t('.title_text') %></title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
     <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
@@ -17,9 +17,10 @@
     padding-left: 0; /* Отступ слева в браузере Firefox, Safari, Chrome */
    }
    a {
-  color: #777777 }
+  color: #777777; }
 a:hover {
-  color: #333  }
+  color: #333;  }
+ 
      </style>
       
      <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -31,7 +32,7 @@ a:hover {
   <div id="preloader">
    <div class="dws-progress-bar"></div>
     </div>
-     <div class="animated fadeInDownBig"><div class="logo"></div></div>
+     <div class="animated fadeInDownBig"><div class="logo"><img src="https://image.ibb.co/i8Yo7y/logo.png" alt="logo" border="0"></div></div>
       <div class="logo_text2">Web Joys</div>
        <div class="logo_text1"><%= t('.logo_text') %></div>  
     <div class="ln"><div class="animated bounceInDown"><div class="btn_ln">
@@ -84,8 +85,15 @@ a:hover {
                 <li class="dropdown-header"></i>&nbsp; &nbsp; &nbsp; <%= t('.btn_new_cat') %></li>
                 <li><a class="link_to" href="#"><i class="fa fa-folder" aria-hidden="true"></i>&nbsp;<%= t('.btn_works') %></a></li>
                 <li><a class="link_to" href="#"><i class="fa fa-thumbs-up" aria-hidden="true"></i>&nbsp;<%= t('.btn_works') %></a></li>
+
               </ul>
             </li>
+             <li class="btn <%= " active" if I18n.locale == :en %>">
+              <%= link_to "En", { locale: :en }, class: "btn btn-outline-primary" %>
+            </li>
+             <li class="btn <%= " active" if I18n.locale == :ru %>">
+              <%= link_to "Рус", { locale: :ru }, class: "btn btn-outline-primary" %>
+            </li> 
           </ul>
                
            
@@ -94,18 +102,41 @@ a:hover {
       </div>
     </nav>
   <!--///////////////////-->
- 
-<div class="container">
+ <div class="container">
   <div class="row">
-     <div class="content">
-       <div class="col-sm-4 col-md-4 col-lg-6">
+    <div class="content">
+       <div class="col-sm-12 col-md-12 col-lg-12">
+        <div class="stih"><div class="text_home_title"><h2><%= t('.text_home_title') %></h2></div>
+     <div class="text_home"><%= t('.text_home1') %><br>
+       <%= t('.text_home2') %><br>
+       <%= t('.text_home3') %><br>
+       <%= t('.text_home4') %><br><br>
+       <%= t('.text_home5') %><br>
+       <%= t('.text_home6') %><br>
+       <%= t('.text_home7') %><br>
+       <%= t('.text_home8') %><br><br>
+       <div class="text_a.s"><%= t('.text_as') %></div>
+     </div>
+     <nav id="menu2">
+<a href="#lp1" class="scrollto2"><div class="arrow-scroll2">
+    <div class="arrow-scroll__wrap arrow-scroll__wrap_animated">
+      <svg style="fill:#000;" x="0px" y="0px" width="38.417px" height="18.592px" viewbox="0 0 38.417 18.592" id="lp1">
+        <g>
+          <path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path>
+        </g>
+      </svg>
+    </div>
+  </div>
+</a></nav>
+   </div></div>
+         <div class="col-sm-4 col-md-4 col-lg-6">
+                <div class="view view-first">
+                   <img class="img_home_left" src="https://image.ibb.co/kdk70J/Screenshot_12.png" alt="">
 
-        <div class="view view-first">
-                   <img class="img_home_left" src="https://unsplash.it/585/400?image=443" alt="">
                     <div class="mask">
-                        <h2 class="class="view view-first"">Пример шаблона #1</h2>
-                        <p class="class="view view-first"">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
-                        <a href="#" class="info">Далее</a>
+                        <h2 class="class="view view-first""><%= t('.text_blog') %></h2>
+                        <p class="class="view view-first""><%= t('.text_blog1') %></p>
+                        <a href="#" class="info"><%= t('.read_more') %></a>
                     </div>
                 </div> 
                 </div>
@@ -113,11 +144,11 @@ a:hover {
          <div class="col-sm-4 col-md-8 col-lg-6">
            
   <div class="view view-first">
-                   <img class="img_home_left" src="https://unsplash.it/585/400?image=440" alt="">
+                   <img class="img_home_left" src="https://image.ibb.co/fmimcy/Screenshot_21.png" alt="">
                     <div class="mask">
-                        <h2 class="class="view view-first"">Пример шаблона #2</h2>
-                        <p class="class="view view-first"">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
-                        <a href="#" class="info">Далее</a>
+                        <h2 class="class="view view-first""><%= t('.text_landing0') %></h2>
+                        <p class="class="view view-first""><%= t('.text_landing_title') %></p>
+                        <a href="../parallax/" class="info" target="_blank"><%= t('.read_more') %></a>
                     </div>
                 </div> 
                </div>
@@ -127,11 +158,11 @@ a:hover {
        <div class="col-sm-4 col-md-4 col-lg-6">
 
        <div class="view view-first">
-                   <img class="img_home_left" src="https://unsplash.it/585/400?image=442" alt="">
+                   <img class="img_home_left" src="https://image.ibb.co/jKXWSy/Screenshot_13.jpg" alt="">
                     <div class="mask">
-                        <h2 class="class="view view-first"">Пример шаблона #1</h2>
-                        <p class="class="view view-first"">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
-                        <a href="#" class="info">Далее</a>
+                        <h2 class="class="view view-first"">landing page 1</h2>
+                        <p class="class="view view-first""><%= t('.text_landing1') %></p>
+                        <a href="#" class="info"><%= t('.read_more') %></a>
                     </div>
                 </div> 
                 </div>
@@ -139,11 +170,11 @@ a:hover {
          <div class="col-sm-4 col-md-8 col-lg-6">
            
 <div class="view view-first">
-                   <img class="img_home_left" src="https://unsplash.it/585/400?image=443" alt="">
+                   <img class="img_home_left" src="https://image.ibb.co/hH5J7y/Screenshot_15.jpg" alt="">
                     <div class="mask">
-                        <h2 class="class="view view-first"">Пример шаблона #2</h2>
-                        <p class="class="view view-first"">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
-                        <a href="#" class="info">Далее</a>
+                        <h2 class="class="view view-first"">landing page 2</h2>
+                        <p class="class="view view-first""><%= t('.text_landing1') %></p>
+                        <a href="#" class="info"><%= t('.read_more') %></a>
                     </div>
                 </div> 
                 </div></div>
@@ -153,11 +184,11 @@ a:hover {
        <div class="col-sm-4 col-md-4 col-lg-6">
 
        <div class="view view-first">
-                   <img class="img_home_left" src="https://unsplash.it/585/400?image=449" alt="">
+                   <img class="img_home_left" src="https://image.ibb.co/e529Ed/Screenshot_17.jpg" alt="">
                     <div class="mask">
-                        <h2 class="class="view view-first"">Пример шаблона #1</h2>
-                        <p class="class="view view-first"">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
-                        <a href="#" class="info">Далее</a>
+                        <h2 class="class="view view-first"">landing page 3</h2>
+                        <p class="class="view view-first""><%= t('.text_landing1') %></p>
+                        <a href="#" class="info"><%= t('.read_more') %></a>
                     </div>
                 </div> 
                 </div>
@@ -165,11 +196,11 @@ a:hover {
          <div class="col-sm-4 col-md-8 col-lg-6">
            
 <div class="view view-first">
-                   <img class="img_home_left" src="https://unsplash.it/585/400?image=447" alt="">
+                   <img class="img_home_left" src="https://image.ibb.co/iteZfJ/Screenshot_19.jpg" alt="">
                     <div class="mask">
-                        <h2 class="class="view view-first"">Пример шаблона #2</h2>
-                        <p class="class="view view-first"">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.</p>
-                        <a href="#" class="info">Далее</a>
+                        <h2 class="class="view view-first"">landing page 4</h2>
+                        <p class="class="view view-first""><%= t('.text_landing1') %></p>
+                        <a href="#" class="info"><%= t('.read_more') %></a>
                     </div>
                 </div> 
                 </div></div>
@@ -180,28 +211,13 @@ a:hover {
     <div class="content">
        <div class="col-sm-4 col-md-4 col-lg-6">
 
-        <div class="view view-first">
-                   <img class="img_home_left" src="https://unsplash.it/585/400?image=471" alt="">
-                    <div class="mask">
-                        <h2 class="class="view view-first"">Пример шаблона #1</h2>
-                        <p class="class="view view-first"">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-                        </p>
-                        <a href="#" class="info">Далее</a>
-                    </div>
-                </div> 
+        
+                </div>
                 </div>
         
          <div class="col-sm-4 col-md-8 col-lg-6">
            
-<div class="view view-first">
-                   <img class="img_home_left" src="https://unsplash.it/585/400?image=445" alt="">
-                    <div class="mask">
-                        <h2 class="class="view view-first"">Пример шаблона #2</h2>
-                        <p class="class="view view-first"">Lorem Ipsum - это текст-"рыба", часто используемый в печати и вэб-дизайне.
-                        </p>
-                        <a href="#" class="info">Далее</a>
-                    </div>
-                </div> 
+         
                 </div></div>
          <div class="clearfix"></div>
        
@@ -214,48 +230,42 @@ a:hover {
         <div class="container">
             <div class="row">
                 <div class="f_cpl">
-               <div class="col-md-4 col-sm-12 col-xs-12 my-col"><h3>Создание сайтов</h3>
+               <div class="col-md-4 col-sm-12 col-xs-12 my-col"><h3><%= t('.map_site') %></h3>
                     <ul class="center">
-                        <li><a href="#">Блог</a></li>
-                        <li><a href="#">Визика</a></li>
-                        <li><a href="#">Интернет магазин</a></li>
-                        <li><a href="#">Государственные услуги</a></li>
+                        <li class="btn"> <a class="nav-link3" href="<%= posts_path %>"><%= t('.btn_blog') %></a></li>
+                        <li class="btn"><a class="btn btn-outline-primary" href="<%= contact_us_path %>"><%= t('.btn_contacts') %></a></li>
+                       
                     </ul></div>
                <div class="col-md-4 col-sm-12 col-xs-12 my-col">
-                    <h3>Создание сайтов</h3>
+                    <h3><%= t('.create_site') %></h3>
                     <ul class="center">
-                        <li><a href="#">Блог</a></li>
-                        <li><a href="#">Визика</a></li>
-                        <li><a href="#">Интернет магазин</a></li>
-                        <li><a href="#">Государственные услуги</a></li>
+                        <li><a href="#"><%= t('.btn_blog_site') %></a></li>
+                        <li><a href="#"><%= t('.btn_card') %></a></li>
                     </ul>
                 </div>
-             <div class="col-md-4 col-sm-12 col-xs-12 my-col"><h3>Создание сайтов</h3>
-                    <ul class="center">
-                        <li><a href="#">Блог</a></li>
-                        <li><a href="#">Визика</a></li>
-                        <li><a href="#">Интернет магазин</a></li>
-                        <li><a href="#">Государственные услуги</a></li>
-                    </ul></div>
+                     <div class="col-md-4 col-sm-12 col-xs-12 my-col">
+                   <div class="money"><iframe src="https://funding.webmoney.ru/widgets/vertical/d7adb0db-02c5-4b93-aa6d-426107c6276a?bt=0&hs=1&sum=100" width="240" height="240" scrolling="no" style="border:none;"></iframe></div></div>
                 </div>
-                </div>
-                 <div class="row_footer">
-                                 
-                
-                <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
-                   
-                    <ul class="social">
+                    
+                    <div class="col-lg-6  col-md-12 col-sm-12 col-xs-12 ">
+                      <div class="logo_footer">
+                   <li class="btn"><a class="logo_ubuntu" href="https://www.ubuntu.com/"></a></li>
+                   <li class="btn"><a class="logo_rails" href="https://rubyonrails.org/"></a></li>
+                   <li class="btn"><a class="logo_postgresql" href="https://www.postgresql.org/"></a></li>
+                   <li class="btn"><a class="logo_nginx" href="https://nginx.ru/ru/"></a></li></div></div>
+                    
+                 </div>
+               </div>
+                 
+                   <div class="row_footer">
+                        <div class="col-lg-12  col-md-12 col-sm-12 col-xs-12 ">
+                        <ul class="social"></h3>
                         <li><a href="#"><i class="fa fa-github"></i></a></li>
                         <li><a href="#"><i class="fa fa-twitter"></i></a></li>
                         <li><a href="#"><i class="fa fa-google-plus"></i></a></li>
                         <li><a href="#"><i class="fa fa-facebook"></i></a></li>
-                        
-                    </ul>
-                </div>
+                        </ul></div></div>
                
-                </div>
-               
-            </div>
             <!--/.row--> 
         </div>
         <!--/.container--> 
@@ -263,13 +273,15 @@ a:hover {
     <!--/.footer-->
     
     <div class="footer-bottom">
+      
         <div class="container">
-            <p class="pull-left"> Copyright © Web-Joys.ru 2018</p>
-            <div class="pull-right">
-                
-            </div>
+            <p class="pull-left"> Copyright © Web-Joys.ru</p>
+             <div class="pull-left2_f"><p class="pull-left2"> 2018</p></div>
         </div>
+                             
     </div>
+    
+          
     <!--/.footer-bottom--> 
 </footer>
 
@@ -277,6 +289,24 @@ a:hover {
 
   $(document).ready(function(){
 $("#menu").on("click","a", function (event) {
+//отменяем стандартную обработку нажатия по ссылке
+event.preventDefault();
+
+//забираем идентификатор бока с атрибута href
+var id = $(this).attr('href'),
+
+//узнаем высоту от начала страницы до блока на который ссылается якорь
+top = $(id).offset().top;
+
+//анимируем переход на расстояние - top за 1500 мс
+$('body,html').animate({scrollTop: top}, 1000);
+});
+});</script>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+$("#menu2").on("click","a", function (event) {
 //отменяем стандартную обработку нажатия по ссылке
 event.preventDefault();
 
@@ -304,6 +334,7 @@ $('body,html').animate({scrollTop: top}, 1000);
  });
 });
 </script>
+
 
 <script type="text/javascript">
   (function ( $ ) {

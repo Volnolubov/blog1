@@ -10,8 +10,8 @@ ru:
         subject: "Контактное сообщение от %{email}"
     contacts:
       new: &new
-        contact_us: "Свяжитесь с Нами"
-        email: "Электронная Почта"
+        contact_us: "Форма обратной сязи"
+        email: "Электронная почта"
         message: "Сообщение"
         name: "Имя"
         subject: "Тематика"
