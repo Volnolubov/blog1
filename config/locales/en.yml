@@ -130,7 +130,7 @@ en:
      read_more: 'Read more'
      text_blog1: 'How I created this site'
      text_landing0: 'Effects for the site'
-     text_landing_title: 'Parallax effect + javascript animation'
+     text_landing_title: 'Parallax, javascript animation'
   posts:
     create_yes: 'Article successfully created'
     create_no: 'Article not created'
