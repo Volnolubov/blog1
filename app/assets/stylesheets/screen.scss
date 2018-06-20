@@ -89,3 +89,11 @@ p_home_left {
    @include respond-to(handhelds) { background-color: #ebebeb; background-image: none; }
    @include respond-to(medium-screens) { background-color: #ebebeb; background-image: none; }
 }
+
+
+.carousel-inner
+{
+                       
+   @include respond-to(handhelds) { bottom: -70px; }
+   @include respond-to(medium-screens) { bottom: -70px; }
+}

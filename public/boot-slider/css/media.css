@@ -1,0 +1,38 @@
+.carousel-inner h3 {
+ font-size: 20px;
+ padding: 15px;
+}
+
+@media (min-width: 392px) {
+  .carousel-inner h3 {
+    padding: 0;
+    position: relative;
+    bottom: 70px;
+     }
+  }
+.carousel-inner p {
+ font-size: 16px;
+ 
+ animation: anime-P 1.6s ease-out;
+ border-radius: 25px;
+ 
+}
+
+@media all and (max-width: 768px){
+ .carousel-caption {
+  bottom: 10%;
+  padding-bottom: 90px;
+ }
+ .carousel-inner h3 {
+  font-size: 18px;
+ }
+ .carousel-inner p {
+  font-size: 14px;
+ }
+}
+@media all and (max-width: 600px) {
+ .carousel-inner h3,
+ .carousel-inner p {
+  
+ }
+}
