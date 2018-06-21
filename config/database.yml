@@ -83,6 +83,7 @@ test:
 #
 production:
   adapter: postgresql
+  host: localhost
   database: blog
   username: gena
   password: TeI9b2dTkUkJ
