@@ -6,14 +6,14 @@ nav.navbar.stickytop {
        z-index: 99;
        box-shadow: 2px 2px 2px 1px rgba(171, 166, 166, 0.3);
        height: 66px;
-       z-index: 88;
+       z-index: 990;
 }
 
 nav.navbar_home.stickytop {
        position: fixed;
        top: 0;
        width: 100%;
-       z-index: 88;
+       z-index: 990;
        box-shadow: 2px 2px 2px 1px rgba(171, 166, 166, 0.3);
        height: 66px;
 }
@@ -21,7 +21,7 @@ nav.navbar_home.stickytop {
 .navbar-default {
     
     height: 65px;
-    z-index: 88;
+    z-index: 990;
 }
 
 .navbar-collapse.in {
@@ -31,7 +31,7 @@ nav.navbar_home.stickytop {
 
 .nav-brend {
   
-  z-index: 98;
+  z-index: 999;
 }
 
 .navbar-collapse {
@@ -39,7 +39,7 @@ nav.navbar_home.stickytop {
     overflow: hidden;
     position: relative;
     margin-left: o;
-    z-index: 88;
+    z-index: 990;
 }
 
 .navbar-nav {
