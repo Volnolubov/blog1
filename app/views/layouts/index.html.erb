@@ -165,13 +165,23 @@ a:hover {
                    <li class="btn"><a class="logo_rails" href="https://rubyonrails.org/"></a></li>
                    <li class="btn"><a class="logo_postgresql" href="https://www.postgresql.org/"></a></li>
                    <li class="btn"><a class="logo_nginx" href="https://nginx.ru/ru/"></a></li></div> 
+                    <nav id="menu2">
+<a href="#bloc2" class="scrollto"><div class="arrow-scroll">
+    <div class="arrow-scroll__wrap arrow-scroll__wrap_animated">
+      <svg style="fill:#000;" x="0px" y="0px" width="38.417px" height="18.592px" viewbox="0 0 38.417 18.592">
+        <g>
+          <path d="M19.208,18.592c-0.241,0-0.483-0.087-0.673-0.261L0.327,1.74c-0.408-0.372-0.438-1.004-0.066-1.413c0.372-0.409,1.004-0.439,1.413-0.066L19.208,16.24L36.743,0.261c0.411-0.372,1.042-0.342,1.413,0.066c0.372,0.408,0.343,1.041-0.065,1.413L19.881,18.332C19.691,18.505,19.449,18.592,19.208,18.592z"></path>
+        </g>
+      </svg>
+    </div>
+  </div>
+</a></nav>
+
   </div>       
     
-  
-
-  
+   
  </div>
- </div>
+ </div><div class="row" id="bloc2"><div class="line_row"></div></div>
 <div class="col-sm-12 col-md-12 col-lg-12"><h1 class="toph1"><%= t('.gratitude_blog') %></h1></div>
  <div class="center_dv"><div class="col-sm-4 col-md-4 col-lg-4"></div>
          <div class="col-sm-4 col-md-4 col-lg-4">
@@ -187,7 +197,8 @@ a:hover {
                 </div><div class="col-sm-4 col-md-4 col-lg-4"></div></div>
                 
     <div class="clearfix"></div>
-    <div class="content"><div class="col-sm-12 col-md-12 col-lg-12"><div class="blog_1"><h1 class="toph1"><%= t('.Landing1') %></h1></div></div>
+    <div class="content">
+<div class="col-sm-12 col-md-12 col-lg-12"><div class="blog_1"><h1 class="toph1"><%= t('.Landing1') %></h1></div></div>
        <div class="col-sm-4 col-md-4 col-lg-6">
         <div class="view view-first">
                    <img class="img_home_left" src="parallax/images/2.jpg"" alt="">
@@ -275,7 +286,7 @@ a:hover {
                     </ul>
                 </div>
                      <div class="col-md-4 col-sm-12 col-xs-12 my-col">
-                   <div class="money"><iframe src="https://money.yandex.ru/quickpay/shop-widget?writer=seller&targets=%D0%9F%D0%BE%D0%B4%D0%B4%D0%B5%D1%80%D0%B6%D0%B0%D1%82%D1%8C&targets-hint=&default-sum=&button-text=11&payment-type-choice=on&hint=&successURL=&quickpay=shop&account=410016924690067" width="242" height="242" frameborder="0" allowtransparency="true" scrolling="no"></iframe></div></div>
+                   <div class="money"><iframe src="https://funding.webmoney.ru/widgets/vertical/d7adb0db-02c5-4b93-aa6d-426107c6276a?bt=0&hs=1&sum=100" width="240" height="240" scrolling="no" style="border:none;"></iframe></div></div>
                 </div>
                     
                     <div class="col-lg-6  col-md-12 col-sm-12 col-xs-12 ">
@@ -333,6 +344,43 @@ top = $(id).offset().top;
 $('body,html').animate({scrollTop: top}, 1000);
 });
 });</script>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+$("#menu2").on("click","a", function (event) {
+//отменяем стандартную обработку нажатия по ссылке
+event.preventDefault();
+
+//забираем идентификатор бока с атрибута href
+var id = $(this).attr('href'),
+
+//узнаем высоту от начала страницы до блока на который ссылается якорь
+top = $(id).offset().top;
+
+//анимируем переход на расстояние - top за 1500 мс
+$('body,html').animate({scrollTop: top}, 1000);
+});
+});</script>
+
+<script type="text/javascript">
+
+  $(document).ready(function(){
+$("#menu3").on("click","a", function (event) {
+//отменяем стандартную обработку нажатия по ссылке
+event.preventDefault();
+
+//забираем идентификатор бока с атрибута href
+var id = $(this).attr('href'),
+
+//узнаем высоту от начала страницы до блока на который ссылается якорь
+top = $(id).offset().top;
+
+//анимируем переход на расстояние - top за 1500 мс
+$('body,html').animate({scrollTop: top}, 1000);
+});
+});</script>
+
 
 <script type="text/javascript">
   $(function(){
