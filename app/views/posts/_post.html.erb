@@ -8,11 +8,10 @@
 <div class="bin_edit"><i class="fa fa-folder-open" aria-hidden="true"></i>&nbsp;<% if post.category.present? %>
 <%= link_to post.category.name, post.category, class: 'link_to' %><% end %>
 </div>
-      
+     
 <div class="bin_edit"><i class="fa fa-edit" aria-hidden="true"></i>&nbsp;<%=link_to t('.edits'), edit_admin_post_path(post), class: 'link_to' %></div>
 
 <div class="bin_del"><i class="fa fa-trash" aria-hidden="true"></i>&nbsp;<%=link_to t('.delete'), admin_post_path(post),  method: :delete,  data: { confirm: t('.qwestchion') }, class: 'link_to' %></div></div></div>
-
 </small>
 </section>
 <div class="row">&nbsp;</div>

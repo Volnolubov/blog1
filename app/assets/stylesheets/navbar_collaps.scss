@@ -21,6 +21,7 @@ nav.navbar_home.stickytop {
 .navbar-default {
     
     height: 65px;
+    z-index: 88;
 }
 
 .navbar-collapse.in {
@@ -38,7 +39,7 @@ nav.navbar_home.stickytop {
     overflow: hidden;
     position: relative;
     margin-left: o;
-    z-index: 999;
+    z-index: 88;
 }
 
 .navbar-nav {
