@@ -17,3 +17,9 @@ module Blog
     config.i18n.default_locale = :ru
   end
 end
+
+module YourApp
+  class Application < Rails::Application
+    config.middleware.use Rack::Deflater
+  end
+end
