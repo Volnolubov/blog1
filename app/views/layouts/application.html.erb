@@ -78,10 +78,10 @@ a:hover {
               </ul>
             </li>
           </ul>
-              
+               
             <li class="btn <%= 'active' if current_page?(root_path) || current_page?(new_admin_post_path) %>">
              <%= link_to t('.new_articles'), new_admin_post_path, class: 'btn btn-outline-primary' %></li>
-           
+          
            
               <% if user_signed_in? %>
               <li class="btn">

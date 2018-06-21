@@ -1,5 +1,6 @@
 class Admin::AdminController < ApplicationController
 
+
   protected
 
   def check_admin
