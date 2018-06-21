@@ -32,10 +32,8 @@ a:hover {
 <script>new WOW().init();</script>         
      </head>
  <body class="body-style" style='overflow-x:hidden;'>  
-  <div id="preloader">
-   <div class="dws-progress-bar"></div>
-    </div>
-     <div class="animated fadeInDownBig"><div class="logo"><img src="http://drive.google.com/uc?export=view&id=1Ud_H2roZwVPKPfZx8ukSNOzEUtodMZcG" alt="logo" border="0"></div></div>
+ 
+     <div class="animated fadeInDownBig"><div class="logo"><img src="parallax/images/logo.png" alt="logo" border="0"></div></div>
       <div class="logo_text2">Web Joys</div>
        <div class="logo_text1"><%= t('.logo_text') %></div>  
     <div class="ln"><div class="animated bounceInDown"><div class="btn_ln">
@@ -190,7 +188,7 @@ a:hover {
  <div class="center_dv"><div class="col-sm-4 col-md-4 col-lg-4"></div>
          <div class="col-sm-4 col-md-4 col-lg-4">
                <div class="blog_1"><div class="view view-first">
-                   <img class="img_home_left" src="https://drive.google.com/uc?export=view&id=1sPtovysw7yPra9-EIkCJoMI5X6AVoowv" alt="">
+                   <img class="img_home_left" src="parallax/images/1.jpg" alt="">
 
                     <div class="mask">
                         <h2 class="class="view view-first""><%= t('.text_blog') %></h2>
@@ -204,7 +202,7 @@ a:hover {
     <div class="content"><div class="col-sm-12 col-md-12 col-lg-12"><div class="blog_1"><h1 class="toph1"><%= t('.Landing1') %></h1></div></div>
        <div class="col-sm-4 col-md-4 col-lg-6">
         <div class="view view-first">
-                   <img class="img_home_left" src="https://drive.google.com/uc?export=view&id=1y6Jr3uXRyqQBLdXR3SRN4Ok78xv0t9sc" alt="">
+                   <img class="img_home_left" src="parallax/images/2.jpg"" alt="">
                     <div class="mask">
                         <h2 class="class="view view-first"">landing page 1</h2>
                         <p class="class="view view-first""><%= t('.text_landing1') %></p>
@@ -216,7 +214,7 @@ a:hover {
          <div class="col-sm-4 col-md-4 col-lg-6">
            
 <div class="view view-first">
-                   <img class="img_home_left" src="https://drive.google.com/uc?export=view&id=1iUpqfYArsix-veyRMNs3K0mIkWSx83Ce" alt="">
+                   <img class="img_home_left" src="parallax/images/3.jpg" alt="">
                     <div class="mask">
                         <h2 class="class="view view-first"">landing page 2</h2>
                         <p class="class="view view-first""><%= t('.text_landing1') %></p>
@@ -230,7 +228,7 @@ a:hover {
        <div class="col-sm-4 col-md-4 col-lg-6">
 
        <div class="view view-first">
-                   <img class="img_home_left" src="https://drive.google.com/uc?export=view&id=1x1mlM4K0e9LsUXSpmm7oBgufndIvcTlP" alt="">
+                   <img class="img_home_left" src="parallax/images/4.jpg" alt="">
                     <div class="mask">
                         <h2 class="class="view view-first"">landing page 3</h2>
                         <p class="class="view view-first""><%= t('.text_landing1') %></p>
@@ -242,7 +240,7 @@ a:hover {
          <div class="col-sm-4 col-md-8 col-lg-6">
            
 <div class="view view-first">
-                   <img class="img_home_left" src="https://drive.google.com/uc?export=view&id=1iBBeh2rAMUd1oRMjE7LhqxuOAQ0sw9vk" alt="">
+                   <img class="img_home_left" src="parallax/images/5.jpg" alt="">
                     <div class="mask">
                         <h2 class="class="view view-first"">landing page 4</h2>
                         <p class="class="view view-first""><%= t('.text_landing1') %></p>
@@ -255,20 +253,20 @@ a:hover {
                 
                 
                 <div class="col-sm-4 col-md-4 col-lg-4"></div>
-                                  <div class="col-sm-4 col-md-4 col-lg-4">
+                                  <div class="center_dv"><div class="col-sm-4 col-md-4 col-lg-4">
       <div class="view view-first">
-                   <img class="img_home_left" src="https://drive.google.com/uc?export=view&id=17JK7f6vLP3xcGUKWHDxjJ5-iHyAbG5i9" alt="">
+                   <img class="img_home_left" src="parallax/images/6.jpg" alt="">
                     <div class="mask">
                         <h2 class="class="view view-first""><%= t('.text_landing0') %></h2>
                         <p class="class="view view-first""><%= t('.text_landing_title') %></p>
                         <a href="../parallax/" class="info" target="_blank"><%= t('.read_more') %></a>
                     </div>
                 </div> 
-               </div><div class="col-sm-4 col-md-4 col-lg-4"></div></div>
+               </div><div class="col-sm-4 col-md-4 col-lg-4"></div></div></div>
                
   </div>
 </div>
-</div>
+
  
 <footer>
     <div class="footer" id="footer">
@@ -361,274 +359,6 @@ $('body,html').animate({scrollTop: top}, 1000);
 });
 </script>
 
-
-<script type="text/javascript">
-  (function ( $ ) {
-
-    var global_settings = {};
-
-    var methods = {
-        init : function(options) {
-            // This is the easiest way to have default options.
-            var settings = $.extend({
-                // These are the defaults.
-                color: "#818080",
-                height: "300px",
-                width: "300px",
-                line_width: 8,
-                starting_position: 25,
-                percent: 100,
-                counter_clockwise: false,
-                percentage: true,
-                text: ''
-            }, options );
-            global_settings = settings;
-
-
-            // Create percentage
-            var percentage = $("<div class='progress-percentage'></div>");
-
-            if(!global_settings.percentage) {
-                percentage.text(global_settings.percentage);
-            }
-            $(this).append(percentage);
-
-
-            // Create text
-            var text = $("<div class='progress-text'></div>");
-
-            // Custom text
-            if(global_settings.text != "percent") {
-                text.text(global_settings.text);
-            }
-            $(this).append(text);
-
-            // Correct any invalid values
-            if(global_settings.starting_position != 100) {
-                global_settings.starting_position = global_settings.starting_position % 100;
-            }
-            if(global_settings.ending_position != 100) {
-                global_settings.ending_position = global_settings.ending_position % 100;
-            }
-            // No 'px' or '%', add 'px'
-            appendUnit(global_settings.width);
-            appendUnit(global_settings.height);
-
-            // Apply global_settings
-            $(this).css({
-                "height": global_settings.height,
-                "width": global_settings.width
-            });
-            $(this).addClass("circular-progress-bar");
-
-            // Remove old canvas
-            $(this).find("canvas").remove();
-
-            // Put canvas inside this
-            $(this).append(createCanvas($(this)));
-
-            // Return allows for chaining
-            return this;
-        },
-        percent : function(value) {
-            // Change percent
-            global_settings.percent = value;
-            // Apply global_settings
-            $(this).css({
-                "height": global_settings.height,
-                "width": global_settings.width
-            });
-            // Remove old canvas
-            $(this).children("canvas").remove();
-            // Put canvas inside this
-            $(this).append(createCanvas($(this)));
-
-            // Return allows for chaining
-            return this;
-        },
-        animate : function(value, time) {
-            // Apply global_settings
-            $(this).css({
-                "height": global_settings.height,
-                "width": global_settings.width
-            });
-
-            // Number of intervals, 10ms interval
-            var num_of_steps = time / 10;
-            // Amount of change each step
-            var percent_change = (value - global_settings.percent) / num_of_steps;
-
-            // Variable conflict, rename this
-            var scope = $(this);
-            var theInterval = setInterval(function() {
-                if(global_settings.percent < value) {
-                    // Remove old canvas
-                    scope.children("canvas").remove();
-                    // Increment percent
-                    global_settings.percent += percent_change;
-                    // Put canvas inside this
-                    scope.append(createCanvas(scope));
-                } else {
-                    clearInterval(theInterval);
-                }
-            }, 10);
-
-            // Return allows for chaining
-            return this;
-        }
-    };
-
-    $.fn.circularProgress = function(methodOrOptions) {
-        if (methods[methodOrOptions]) {
-            // Method found
-            return methods[methodOrOptions].apply(this, Array.prototype.slice.call(arguments, 1));
-        } else if (typeof methodOrOptions === 'object' || !methodOrOptions) {
-            // Default to "init", object passed in or nothing passed in
-            return methods.init.apply( this, arguments );
-        } else {
-            $.error('Method ' +  methodOrOptions + ' does not exist.');
-        }
-    };
-
-    /* =========================================================================
-        PRIVATE FUNCTIONS
-    ========================================================================= */
-
-    // return string without 'px' or '%'
-    function removeUnit(apples) {
-        if(apples.indexOf("px")) {
-            return apples.substring(0, apples.length - 2);
-        } else if(canvas_height.indexOf("%")) {
-            return apples.substring(0, apples.length - 1);
-        }
-    };
-    // return string with 'px'
-    function appendUnit(apples) {
-        if(apples.toString().indexOf("px") < -1 && apples.toString().indexOf("%") < -1) {
-            return apples += "px";
-        }
-    };
-    // calculate starting position on canvas
-    function calcPos(apples, percent) {
-        if(percent < 0) {
-            // Calculate starting position
-            var starting_degree = (parseInt(apples) / 100) * 360;
-            var starting_radian = starting_degree * (Math.PI / 180);
-            return starting_radian - (Math.PI / 2);
-        } else {
-            // Calculate ending position
-            var ending_degree = ((parseInt(apples) + parseInt(percent)) / 100) * 360;
-            var ending_radian = ending_degree * (Math.PI / 180);
-            return ending_radian - (Math.PI / 2);
-        }
-    };
-    // Put percentage or custom text inside progress circle
-    function insertText(scope) {
-        global_settings.percent = (global_settings.percent > 100) ? 100 : global_settings.percent;
-        $(".progress-percentage").text(Math.round(global_settings.percent) + "%");
-    }
-    // create canvas
-    function createCanvas(scope) {
-        // Remove 'px' or '%'
-        var canvas_height = removeUnit(global_settings.height.toString());
-        var canvas_width = removeUnit(global_settings.width.toString());
-
-        // Create canvas
-        var canvas = document.createElement("canvas");
-        canvas.height = canvas_height;
-        canvas.width = canvas_width;
-
-        // Create drawable canvas and apply properties
-        var ctx = canvas.getContext("2d");
-        ctx.strokeStyle = global_settings.color;
-        ctx.lineWidth = global_settings.line_width;
-
-        // Draw arc
-        ctx.beginPath();
-
-        // Calculate starting and ending positions
-        var starting_radian = calcPos(global_settings.starting_position, -1);
-        var ending_radian = calcPos(global_settings.starting_position, global_settings.percent);
-        // Calculate radius and x,y coordinates
-        var radius = 0;
-        var xcoord = canvas_width / 2;
-        var ycoord = canvas_height / 2;
-        // Height or width greater
-        if(canvas_height >= canvas_width) {
-            radius = canvas_width * 0.9 / 2 - (global_settings.line_width * 2);
-        } else {
-            radius = canvas_height * 0.9 / 2 - (global_settings.line_width * 2);
-        }
-
-        /*
-            x coordinate
-            y coordinate
-            radius of circle
-            starting angle in radians
-            ending angle in radians
-            clockwise (false, default) or counter-clockwise (true)
-        */
-        ctx.arc(xcoord, ycoord, radius, starting_radian, ending_radian, global_settings.counter_clockwise);
-        ctx.stroke();
-
-        // Add text
-        if(global_settings.percentage) {
-            insertText(scope);
-        }
-
-        return canvas;
-    };
-
-}( jQuery ));
-</script>
-<script type="text/javascript">
-  $(document).ready(function () {
-    var preloader    = $('#preloader'), // селектор прелоадера
-        imagesCount  = $('img').length, // количество изображений
-        dBody        = $('body'), //обращаемся к body
-        percent      = 100 / imagesCount, // количество % на одну картинку
-        progress     = 0, // точка отсчета
-        imgSum       = 5, // количество картинок
-        loadedImg    = 0; // счетчик загрузки картинок
-
-    if (imagesCount >= imgSum && imagesCount > 0) {
-        preloader.css('background', '#000000');
-        dBody.css('overflow', 'hidden');
-
-        $(".dws-progress-bar").circularProgress({
-            color: "#818080",
-            line_width: 10,
-            height: "200px",
-            width: "200px",
-            percent: 0,
-            // counter_clockwise: true,
-            starting_position: 25
-        }).circularProgress('animate', percent, 1000);
-
-        for (var i = 0; i < imagesCount; i++) { // создаем клоны изображений
-            var img_copy        = new Image();
-            img_copy.src        = document.images[i].src;
-            img_copy.onload     = img_load;
-            img_copy.onerror    = img_load;
-        }
-
-        function img_load () {
-            progress += percent;
-            loadedImg++;
-            if (progress >= 100 || loadedImg == imagesCount) {
-                preloader.delay(400).fadeOut('slow');
-                dBody.css('overflow', '');
-            }
-            $(".dws-progress-bar").circularProgress('animate', progress, 500);
-        }
-    } else {
-        preloader.remove();
-    }
-
-
-});
-
-</script>
 <script type="text/javascript">
   $(function(){
  $(window).scroll(function() {

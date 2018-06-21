@@ -6404,7 +6404,7 @@ button.close {
   
 .carousel-indicators {
   position: absolute;
-  bottom: 40px;
+  bottom: -60px;
   left: 50%;
   z-index: 15;
   width: 60%;
@@ -6416,11 +6416,6 @@ button.close {
    
 }
 
-@media (min-width: 392px) {
-  .carousel-indicators  {
-    bottom: -120px;
-     }
-  }
 
 @media (min-width: 392px) {
   .media_s  {
