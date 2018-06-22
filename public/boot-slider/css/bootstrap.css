@@ -1123,7 +1123,25 @@ img {
   display: block;
   max-width: 100%;
   height: auto;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  top: 175px;
 }
+
+@media (max-width: 368px) {
+ .img-responsive,
+ .thumbnail > img,
+ .thumbnail a > img,
+ .carousel-inner > .item > img,
+ .carousel-inner > .item > a > img {
+    width: 170%;
+    height:200px; 
+    top: 86px;
+  }
+}
+
 .img-rounded {
   border-radius: 6px;
 }
@@ -6417,10 +6435,12 @@ button.close {
 }
 
 
-@media (min-width: 392px) {
-  .media_s  {
-    display: none;
-     }
+.media_s  {
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  position: ralative;
+  top: 175px;
   }
 .carousel-indicators .active {
   width: 12px;

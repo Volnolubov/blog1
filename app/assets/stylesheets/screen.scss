@@ -18,6 +18,13 @@ $large: 1024px;
 @include respond-to(medium-screens) { left: 50%; margin-right: -50%; transform: translate(-50%, -50%); margin: 0; position: relative; width: 236px; } 
     }
     
+.navbar-nav {
+
+  @include respond-to(handhelds) { left: 30%; width: 130px; position: relative; }
+  @include respond-to(medium-screens) { left: 30%; width: 130px; position: relative; } 
+
+}
+
 .fixed_tags    
 {
   
